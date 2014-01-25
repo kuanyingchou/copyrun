@@ -78,6 +78,9 @@
                     <sub-events>
                         <event-block sid="8441933492895279">
                             <conditions>
+                                <condition id="0" name="On collision with another object" sid="3476415438741679" type="player1">
+                                    <param id="0" name="Object">pin</param>
+                                </condition>
                                 <condition id="-7" name="Compare instance variable" sid="3455694579567034" type="player1">
                                     <param id="0" name="Instance variable">life</param>
                                     <param id="1" name="Comparison">4</param>
@@ -88,11 +91,11 @@
                             <sub-events>
                                 <event-block sid="8875864028433046">
                                     <conditions>
-                                        <condition id="0" name="On collision with another object" sid="3476415438741679" type="player1">
-                                            <param id="0" name="Object">pin</param>
-                                        </condition>
                                         <condition id="2" inverted="1" name="Is playing" sid="995493767506487" type="player1">
                                             <param id="0" name="Animation">&quot;Hit&quot;</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="8715762294320598" type="player1">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -145,20 +148,12 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-23" name="Move at angle" sid="3325974932227569" type="player1">
-                                    <param id="0" name="Angle">270</param>
-                                    <param id="1" name="Distance">30</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="7308987795965009" type="player1">
                                     <param id="0" name="Animation">&quot;Jump&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="3583591164792477" type="System">
-                                    <param id="0" name="Seconds">0.3</param>
-                                </action>
-                                <action id="-23" name="Move at angle" sid="161568386150037" type="player1">
-                                    <param id="0" name="Angle">90</param>
-                                    <param id="1" name="Distance">30</param>
+                                    <param id="0" name="Seconds">2</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="2536851966423423" type="player1">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
@@ -213,6 +208,9 @@
                     <sub-events>
                         <event-block sid="4795050635858755">
                             <conditions>
+                                <condition id="0" name="On collision with another object" sid="3476415438741679" type="player2">
+                                    <param id="0" name="Object">slipper</param>
+                                </condition>
                                 <condition id="-7" name="Compare instance variable" sid="9551665643536197" type="player2">
                                     <param id="0" name="Instance variable">life</param>
                                     <param id="1" name="Comparison">4</param>
@@ -223,11 +221,11 @@
                             <sub-events>
                                 <event-block sid="8875864028433046">
                                     <conditions>
-                                        <condition id="0" name="On collision with another object" sid="3476415438741679" type="player2">
-                                            <param id="0" name="Object">slipper</param>
-                                        </condition>
                                         <condition id="2" inverted="1" name="Is playing" sid="4097215567264325" type="player2">
                                             <param id="0" name="Animation">&quot;Hit&quot;</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="312359531454206" type="player2">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -279,20 +277,12 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-23" name="Move at angle" sid="1990599974731959" type="player2">
-                                    <param id="0" name="Angle">270</param>
-                                    <param id="1" name="Distance">30</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="4109691364321041" type="player2">
                                     <param id="0" name="Animation">&quot;Jump&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="8668512443660745" type="System">
-                                    <param id="0" name="Seconds">0.3</param>
-                                </action>
-                                <action id="-23" name="Move at angle" sid="7710064191686104" type="player2">
-                                    <param id="0" name="Angle">90</param>
-                                    <param id="1" name="Distance">30</param>
+                                    <param id="0" name="Seconds">2</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="7597011610470758" type="player2">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
