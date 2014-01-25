@@ -287,14 +287,18 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Over" sid="2178846772748278">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Game.xml</layout>
+        <layout>Over.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>SceneEvent.xml</event-sheet>
-        <event-sheet>PlayerEvent.xml</event-sheet>
+        <event-sheet>OverEvent.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="10" />

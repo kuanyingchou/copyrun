@@ -63,6 +63,19 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="3314997950902131">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="1165232777771823" type="speaker">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="1244919111591938" type="speaker">
+                            <param id="0" name="X">100 + WindowWidth</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="8775974028580874" title="Player1">
@@ -137,6 +150,12 @@
                                     <param id="0" name="Animation">&quot;Dead&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="8819657797985222" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="7435111649312832" type="System">
+                                    <param id="0" name="Layout">Over</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="6207636502751746">
@@ -150,7 +169,9 @@
                                     <param id="0" name="Instance variable">isMaster</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="792456944012561" type="speaker" />
+                                <action id="-1" name="Set X" sid="1895593056734693" type="speaker">
+                                    <param id="0" name="X">100 + WindowWidth</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -192,11 +213,14 @@
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2230619585768262" type="player2">
                                             <param id="0" name="Instance variable">isMaster</param>
                                         </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="1668664919242026" type="player1">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="7397023143893109" type="player1">
                                             <param id="0" name="Angle">270</param>
-                                            <param id="1" name="Distance">5</param>
+                                            <param id="1" name="Distance">3</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -205,11 +229,17 @@
                                         <condition id="-8" name="Is boolean instance variable set" sid="9038324995894448" type="player1">
                                             <param id="0" name="Instance variable">isMaster</param>
                                         </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="9247724890968733" type="player2">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="4974775786828514" type="player1">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="9212507454261386" type="player2">
                                             <param id="0" name="Angle">270</param>
-                                            <param id="1" name="Distance">5</param>
+                                            <param id="1" name="Distance">3</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -228,11 +258,14 @@
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3935009378548457" type="player2">
                                             <param id="0" name="Instance variable">isMaster</param>
                                         </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="2332763806771777" type="player1">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="2637601712187547" type="player1">
                                             <param id="0" name="Angle">90</param>
-                                            <param id="1" name="Distance">5</param>
+                                            <param id="1" name="Distance">3</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -241,11 +274,17 @@
                                         <condition id="-8" name="Is boolean instance variable set" sid="5769310463780556" type="player1">
                                             <param id="0" name="Instance variable">isMaster</param>
                                         </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="3123799555836142" type="player2">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="1192699466769961" type="player1">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="9115762283617287" type="player2">
                                             <param id="0" name="Angle">90</param>
-                                            <param id="1" name="Distance">5</param>
+                                            <param id="1" name="Distance">3</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -327,7 +366,9 @@
                             <param id="0" name="Instance variable">isMaster</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="9876259851691503" type="speaker" />
+                        <action id="-1" name="Set X" sid="38670916473684" type="speaker">
+                            <param id="0" name="X">100 + WindowWidth</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="7575260851704729">
@@ -342,6 +383,12 @@
                         <action id="4" name="Set animation" sid="8756493233124895" type="player2">
                             <param id="0" name="Animation">&quot;Dead&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1712161148823295" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="9195496363023492" type="System">
+                            <param id="0" name="Layout">Over</param>
                         </action>
                     </actions>
                 </event-block>
@@ -381,11 +428,14 @@
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6047990271900381" type="player1">
                                             <param id="0" name="Instance variable">isMaster</param>
                                         </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="3809617092236932" type="player2">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="7038859312784181" type="player2">
                                             <param id="0" name="Angle">270</param>
-                                            <param id="1" name="Distance">5</param>
+                                            <param id="1" name="Distance">3</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -394,11 +444,17 @@
                                         <condition id="-8" name="Is boolean instance variable set" sid="6982586987591043" type="player2">
                                             <param id="0" name="Instance variable">isMaster</param>
                                         </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="6613220424070638" type="player1">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="4686827280404617" type="player2">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="6988008498790818" type="player1">
                                             <param id="0" name="Angle">270</param>
-                                            <param id="1" name="Distance">5</param>
+                                            <param id="1" name="Distance">3</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -417,11 +473,14 @@
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8826469790684652" type="player1">
                                             <param id="0" name="Instance variable">isMaster</param>
                                         </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="3434447294843092" type="player2">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="4998916908257042" type="player2">
                                             <param id="0" name="Angle">90</param>
-                                            <param id="1" name="Distance">5</param>
+                                            <param id="1" name="Distance">3</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -430,11 +489,17 @@
                                         <condition id="-8" name="Is boolean instance variable set" sid="2288774338899293" type="player2">
                                             <param id="0" name="Instance variable">isMaster</param>
                                         </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="4253057768050478" type="player1">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="4023100226960384" type="player2">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="9040057519350816" type="player1">
                                             <param id="0" name="Angle">90</param>
-                                            <param id="1" name="Distance">5</param>
+                                            <param id="1" name="Distance">3</param>
                                         </action>
                                     </actions>
                                 </event-block>
