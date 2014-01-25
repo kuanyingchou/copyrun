@@ -72,7 +72,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="1244919111591938" type="speaker">
-                            <param id="0" name="X">100 + WindowWidth</param>
+                            <param id="0" name="X">Self.X + WindowWidth</param>
                         </action>
                     </actions>
                 </event-block>
@@ -170,7 +170,7 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-1" name="Set X" sid="1895593056734693" type="speaker">
-                                    <param id="0" name="X">100 + WindowWidth</param>
+                                    <param id="0" name="X">self.X + WindowWidth</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -367,7 +367,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-1" name="Set X" sid="38670916473684" type="speaker">
-                            <param id="0" name="X">100 + WindowWidth</param>
+                            <param id="0" name="X">Self.X + WindowWidth</param>
                         </action>
                     </actions>
                 </event-block>
