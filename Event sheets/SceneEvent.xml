@@ -4,44 +4,151 @@
     <name>SceneEvent</name>
     <events>
         <comment></comment>
-        <event-block sid="3561453315717872">
-            <conditions>
-                <condition id="-1" name="Compare X" sid="5496012070460811" type="runway">
-                    <param id="0" name="Comparison">3</param>
-                    <param id="1" name="X co-ordinate">-Self.Width / 2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="8126731349202454" type="runway">
-                    <param id="0" name="X">Self.X + Self.Width / 2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8510808482521461">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="871465891732759" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3356883267725009" type="runway">
-                    <param id="0" name="Angle">180</param>
-                </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9475971213061242" type="obstacle">
-                    <param id="0" name="Angle">180</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6692683749453573">
-            <conditions>
-                <condition id="-1" name="Compare X" sid="8041215036827556" type="obstacle">
-                    <param id="0" name="Comparison">3</param>
-                    <param id="1" name="X co-ordinate">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="6418806216055915" type="obstacle">
-                    <param id="0" name="X">random(0,100) + 800</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="4313368447779565" title="SceneLoop">
+            <sub-events>
+                <event-block sid="3561453315717872">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="5496012070460811" type="runway">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-Self.Width / 2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="8126731349202454" type="runway">
+                            <param id="0" name="X">Self.X + Self.Width / 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8510808482521461">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="871465891732759" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="3356883267725009" type="runway">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="9475971213061242" type="obstacle">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6692683749453573">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="8041215036827556" type="obstacle">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="6418806216055915" type="obstacle">
+                            <param id="0" name="X">random(0,100) + WindowWidth</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8775974028580874" title="Player1">
+            <sub-events>
+                <comment>Player1 Jump</comment>
+                <event-block sid="9710237286149235">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="1913502586996376" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="3325974932227569" type="player1">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">30</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3583591164792477" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="161568386150037" type="player1">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Player1 Move</comment>
+                <event-block sid="5823229941895905">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="6625716880163335" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="7397023143893109" type="player1">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7139751261713367">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="7202674297505212" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="2637601712187547" type="player1">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1770796208970667" title="Player2">
+            <sub-events>
+                <event-block sid="7751503742728986">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="8652045774866821" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="1990599974731959" type="player2">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">30</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8668512443660745" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="7710064191686104" type="player2">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Player2 Move</comment>
+                <event-block sid="8908183057062071">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="9122985595302454" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="7038859312784181" type="player2">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9229954276824622">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="329535832763759" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="4998916908257042" type="player2">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
