@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>SceneEvent</name>
     <events>
-        <comment></comment>
         <event-group description="" sid="4313368447779565" title="SceneLoop">
             <sub-events>
                 <event-block sid="3561453315717872">
@@ -49,58 +48,122 @@
         </event-group>
         <event-group description="" sid="8775974028580874" title="Player1">
             <sub-events>
-                <comment>Player1 Jump</comment>
-                <event-block sid="9710237286149235">
+                <event-block sid="1510345920897547">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="1913502586996376" type="Keyboard">
-                            <param id="0" name="Key">68 (D)</param>
-                        </condition>
+                        <condition id="-2" name="On start of layout" sid="8792768314206321" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-23" name="Move at angle" sid="3325974932227569" type="player1">
-                            <param id="0" name="Angle">270</param>
-                            <param id="1" name="Distance">30</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="3583591164792477" type="System">
-                            <param id="0" name="Seconds">0.3</param>
-                        </action>
-                        <action id="-23" name="Move at angle" sid="161568386150037" type="player1">
-                            <param id="0" name="Angle">90</param>
-                            <param id="1" name="Distance">30</param>
+                        <action id="0" name="Set text" sid="4878976085858877" type="player1_life">
+                            <param id="0" name="Text">player1.life</param>
                         </action>
                     </actions>
                 </event-block>
-                <comment>Player1 Move</comment>
-                <event-block sid="5823229941895905">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="6625716880163335" type="Keyboard">
-                            <param id="0" name="Key">87 (W)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-23" name="Move at angle" sid="7397023143893109" type="player1">
-                            <param id="0" name="Angle">270</param>
-                            <param id="1" name="Distance">5</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7139751261713367">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="7202674297505212" type="Keyboard">
-                            <param id="0" name="Key">83 (S)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-23" name="Move at angle" sid="2637601712187547" type="player1">
-                            <param id="0" name="Angle">90</param>
-                            <param id="1" name="Distance">5</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" sid="7516261663386401" title="Hit">
+                    <sub-events>
+                        <event-block sid="8875864028433046">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3476415438741679" type="player1">
+                                    <param id="0" name="Object">obstacle</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="4814563933541204" type="player1">
+                                    <param id="0" name="Instance variable">life</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8569289992297763" type="player1_life">
+                                    <param id="0" name="Text">player1.life</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group collapsed="1" description="" sid="3474749077250257" title="Input">
+                    <sub-events>
+                        <comment>Player1 Jump</comment>
+                        <event-block sid="9710237286149235">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="1913502586996376" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="3325974932227569" type="player1">
+                                    <param id="0" name="Angle">270</param>
+                                    <param id="1" name="Distance">30</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3583591164792477" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="-23" name="Move at angle" sid="161568386150037" type="player1">
+                                    <param id="0" name="Angle">90</param>
+                                    <param id="1" name="Distance">30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Player1 Move</comment>
+                        <event-block sid="5823229941895905">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="6625716880163335" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="7397023143893109" type="player1">
+                                    <param id="0" name="Angle">270</param>
+                                    <param id="1" name="Distance">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7139751261713367">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="7202674297505212" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="2637601712187547" type="player1">
+                                    <param id="0" name="Angle">90</param>
+                                    <param id="1" name="Distance">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="1770796208970667" title="Player2">
             <sub-events>
+                <event-block sid="9158000800769025">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="305031335536702" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="1039087643724339" type="player1_life">
+                            <param id="0" name="Text">player1.life</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="9874605663161816" title="Hit2">
+                    <sub-events>
+                        <event-block sid="8875864028433046">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3476415438741679" type="player2">
+                                    <param id="0" name="Object">obstacle</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="4814563933541204" type="player2">
+                                    <param id="0" name="Instance variable">life</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8569289992297763" type="player2_life">
+                                    <param id="0" name="Text">player2.life</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block sid="7751503742728986">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="8652045774866821" type="Keyboard">

@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -42,6 +43,9 @@
     <object-folder expanded="1">
         <object-type name="player1" sid="5707695274674667">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="life" sid="164655289858003" type="number" />
+            </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9922581645999047" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -84,6 +88,9 @@
         </object-type>
         <object-type name="player2" sid="8481675325870598">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="life" sid="4781739941885663" type="number" />
+            </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274728871484281" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -92,6 +99,12 @@
         </object-type>
         <object-type name="Keyboard" sid="8746418119657375">
             <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="player1_life" sid="7637747600154332">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="player2_life" sid="9840757069021262">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
