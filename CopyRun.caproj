@@ -11,8 +11,10 @@
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -290,18 +292,35 @@
         <object-type name="Over" sid="2178846772748278">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Text" sid="7315320588727312">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Touch" sid="2268819348500522">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Mouse" sid="3430465769575323">
+            <plugin id="Mouse" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
+        <layout>Start.xml</layout>
         <layout>Game.xml</layout>
         <layout>Over.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>SceneEvent.xml</event-sheet>
+        <event-sheet>GameEvent.xml</event-sheet>
         <event-sheet>OverEvent.xml</event-sheet>
+        <event-sheet>StartEvent.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="10" />
+        <global-instance type="Touch" uid="17">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Mouse" uid="18" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

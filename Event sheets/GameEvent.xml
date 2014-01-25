@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>SceneEvent</name>
+    <name>GameEvent</name>
     <events>
         <event-group description="" sid="4313368447779565" title="SceneLoop">
             <sub-events>

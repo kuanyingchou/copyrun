@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>OverEvent</name>
+    <name>StartEvent</name>
     <events>
-        <event-block sid="4649889535074225">
+        <event-block sid="6399497587660519">
             <conditions>
-                <condition id="1" name="On any key pressed" sid="642438471653491" type="Keyboard" />
+                <condition id="1" name="On any key pressed" sid="3901365688054002" type="Keyboard" />
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="3014482816626637" type="System">
-                    <param id="0" name="Layout">Start</param>
+                <action id="-25" name="Go to layout (by name)" sid="262377686498185" type="System">
+                    <param id="0" name="Layout">&quot;Game&quot;</param>
                 </action>
             </actions>
         </event-block>

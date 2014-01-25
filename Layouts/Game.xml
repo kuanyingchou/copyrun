@@ -2,7 +2,7 @@
 <c2layout>
     <name>Game</name>
     <sid>5968264416035639</sid>
-    <event-sheet>SceneEvent</event-sheet>
+    <event-sheet>GameEvent</event-sheet>
     <size>
         <width>1024</width>
         <height>768</height>
