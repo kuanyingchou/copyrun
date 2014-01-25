@@ -43,7 +43,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-type name="player1" sid="5707695274674667">
             <plugin id="Sprite" />
             <instance-variables>
@@ -341,15 +341,28 @@
         <object-type name="Audio" sid="8263955026092756">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="glass" sid="2254265307280489">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="5203841885983195">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1776741714508763" speed="5">
+                    <frame duration="1" hotspotX="0.501272" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
-    <layout-folder expanded="1">
+    <layout-folder expanded="0">
         <layout>Start.xml</layout>
         <layout>Game.xml</layout>
         <layout>Overp2.xml</layout>
         <layout>Overp1.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
+    <event-folder expanded="0">
         <event-sheet>GameEvent.xml</event-sheet>
         <event-sheet>Overp2Event.xml</event-sheet>
         <event-sheet>StartEvent.xml</event-sheet>
@@ -379,7 +392,7 @@
             </properties>
         </global-instance>
     </global-instances>
-    <sounds-folder expanded="1">
+    <sounds-folder expanded="0">
         <file name="a_hitwav.m4a" />
         <file name="a_hitwav.ogg" />
         <file name="a_hitwav.wav" />
@@ -398,7 +411,7 @@
     </sounds-folder>
     <music-folder expanded="1" />
     <files-folder expanded="1">
-        <file-folder expanded="0" name="Icons">
+        <file-folder expanded="1" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />

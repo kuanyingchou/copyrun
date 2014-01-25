@@ -3,18 +3,18 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvent</name>
     <events>
-        <event-group description="" sid="4313368447779565" title="SceneLoop">
+        <event-group collapsed="1" description="" sid="4313368447779565" title="SceneLoop">
             <sub-events>
                 <event-block sid="3561453315717872">
                     <conditions>
                         <condition id="-1" name="Compare X" sid="5496012070460811" type="runway">
                             <param id="0" name="Comparison">3</param>
-                            <param id="1" name="X co-ordinate">-Self.Width / 2</param>
+                            <param id="1" name="X co-ordinate">-Self.Width</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="8126731349202454" type="runway">
-                            <param id="0" name="X">Self.X + Self.Width / 2</param>
+                            <param id="0" name="X">Self.X + Self.Width *2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -40,6 +40,9 @@
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">5</param>
                             <param id="1" name="Tag (optional)">&quot;play&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="9278220110194322" type="glass">
+                            <param id="0" name="Angle">180</param>
                         </action>
                     </actions>
                 </event-block>
@@ -79,6 +82,19 @@
                     <actions>
                         <action id="-1" name="Set X" sid="1244919111591938" type="speaker">
                             <param id="0" name="X">Self.X + WindowWidth</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7402249655514939">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="8992352011998721" type="glass">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-glass.Width</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="4804436372075419" type="glass">
+                            <param id="0" name="X">glass.X+WindowWidth*2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -204,7 +220,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="3474749077250257" title="Input">
+                <event-group collapsed="1" description="" sid="3474749077250257" title="Input">
                     <sub-events>
                         <comment>Player1 Jump</comment>
                         <event-block sid="9710237286149235">
