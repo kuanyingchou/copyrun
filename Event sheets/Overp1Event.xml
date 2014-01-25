@@ -11,6 +11,7 @@
                 <action id="-2" name="Go to layout" sid="9043575648593245" type="System">
                     <param id="0" name="Layout">Start</param>
                 </action>
+                <action id="33" name="Stop all" sid="6180593107982483" type="Audio" />
             </actions>
         </event-block>
     </events>

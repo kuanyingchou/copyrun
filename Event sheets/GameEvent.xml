@@ -35,6 +35,12 @@
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="9668427232176093" type="speaker">
                             <param id="0" name="Angle">180</param>
                         </action>
+                        <action id="0" name="Play" sid="1998043219072083" type="Audio">
+                            <param id="0" name="Audio file">Tidal_Wave</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">5</param>
+                            <param id="1" name="Tag (optional)">&quot;play&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="6692683749453573">
@@ -103,7 +109,14 @@
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Play" sid="9817503024327996" type="Audio">
+                                    <param id="0" name="Audio file">o_hit</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="8875864028433046">
                                     <conditions>
@@ -350,7 +363,14 @@
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Play" sid="7883986384969248" type="Audio">
+                                    <param id="0" name="Audio file">a_hitwav</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="8875864028433046">
                                     <conditions>

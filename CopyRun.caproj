@@ -10,6 +10,7 @@
     <unique-id>lpwx141mlkvi</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -42,7 +43,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="player1" sid="5707695274674667">
             <plugin id="Sprite" />
             <instance-variables>
@@ -337,6 +338,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Audio" sid="8263955026092756">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -359,8 +363,39 @@
             </properties>
         </global-instance>
         <global-instance type="Mouse" uid="18" />
+        <global-instance type="Audio" uid="26">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder expanded="1" />
+    <sounds-folder expanded="1">
+        <file name="a_hitwav.m4a" />
+        <file name="a_hitwav.ogg" />
+        <file name="a_hitwav.wav" />
+        <file name="eat.m4a" />
+        <file name="eat.ogg" />
+        <file name="eat.wav" />
+        <file name="jump.m4a" />
+        <file name="jump.ogg" />
+        <file name="jump.wav" />
+        <file name="o_hit.m4a" />
+        <file name="o_hit.ogg" />
+        <file name="o_hit.wav" />
+        <file name="Tidal_Wave.m4a" />
+        <file name="Tidal_Wave.ogg" />
+        <file name="Tidal_Wave.wav" />
+    </sounds-folder>
     <music-folder expanded="1" />
     <files-folder expanded="1">
         <file-folder expanded="0" name="Icons">

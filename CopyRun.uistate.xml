@@ -11,7 +11,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Game</layout>
+        <layout>Overp2</layout>
         <event-sheet active="1">GameEvent</event-sheet>
+        <event-sheet>Overp1Event</event-sheet>
+        <event-sheet>Overp2Event</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
