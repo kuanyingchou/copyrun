@@ -306,12 +306,14 @@
     <layout-folder expanded="1">
         <layout>Start.xml</layout>
         <layout>Game.xml</layout>
-        <layout>Over.xml</layout>
+        <layout>Overp2.xml</layout>
+        <layout>Overp1.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>GameEvent.xml</event-sheet>
-        <event-sheet>OverEvent.xml</event-sheet>
+        <event-sheet>Overp2Event.xml</event-sheet>
         <event-sheet>StartEvent.xml</event-sheet>
+        <event-sheet>Overp1Event.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="10" />
