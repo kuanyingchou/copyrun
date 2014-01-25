@@ -26,20 +26,36 @@
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="3356883267725009" type="runway">
                             <param id="0" name="Angle">180</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="9475971213061242" type="obstacle">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="9475971213061242" type="pin">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="9448169479289799" type="slipper">
                             <param id="0" name="Angle">180</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="6692683749453573">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="8041215036827556" type="obstacle">
+                        <condition id="-1" name="Compare X" sid="8041215036827556" type="pin">
                             <param id="0" name="Comparison">3</param>
                             <param id="1" name="X co-ordinate">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" sid="6418806216055915" type="obstacle">
+                        <action id="-1" name="Set X" sid="6418806216055915" type="pin">
+                            <param id="0" name="X">random(0,100) + WindowWidth</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9024549379057564">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="9417580993468716" type="slipper">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="5636715069789856" type="slipper">
                             <param id="0" name="X">random(0,100) + WindowWidth</param>
                         </action>
                     </actions>
@@ -63,7 +79,7 @@
                         <event-block sid="8875864028433046">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="3476415438741679" type="player1">
-                                    <param id="0" name="Object">obstacle</param>
+                                    <param id="0" name="Object">pin</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -149,7 +165,7 @@
                         <event-block sid="8875864028433046">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="3476415438741679" type="player2">
-                                    <param id="0" name="Object">obstacle</param>
+                                    <param id="0" name="Object">slipper</param>
                                 </condition>
                             </conditions>
                             <actions>

@@ -1,4 +1,5 @@
 *.backup1
 .dropbox
 .DS_Store
+Assets
 /Icon*
