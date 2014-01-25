@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SceneEvent</name>
+    <events>
+        <comment></comment>
+        <event-block sid="3561453315717872">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="5496012070460811" type="runway">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-Self.Width / 2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="8126731349202454" type="runway">
+                    <param id="0" name="X">Self.X + Self.Width / 2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8510808482521461">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="871465891732759" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3356883267725009" type="runway">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9475971213061242" type="obstacle">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6692683749453573">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="8041215036827556" type="obstacle">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="6418806216055915" type="obstacle">
+                    <param id="0" name="X">random(0,100) + 800</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
