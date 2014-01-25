@@ -172,6 +172,21 @@
                                 <action id="-1" name="Set X" sid="1895593056734693" type="speaker">
                                     <param id="0" name="X">self.X + WindowWidth</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="3539861777174791" type="player1">
+                                    <param id="0" name="Animation">&quot;Speaker&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4749517812566779" type="System">
+                                    <param id="0" name="Seconds">3.0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="4929907902123801" type="player1">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="8100242972536068" type="player1">
+                                    <param id="0" name="Instance variable">isMaster</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -216,6 +231,10 @@
                                         <condition id="2" inverted="1" name="Is playing" sid="1668664919242026" type="player1">
                                             <param id="0" name="Animation">&quot;Jump&quot;</param>
                                         </condition>
+                                        <condition id="-2" name="Compare Y" sid="2722441696201859" type="player1">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Y co-ordinate">440</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="7397023143893109" type="player1">
@@ -234,6 +253,10 @@
                                         </condition>
                                         <condition id="2" inverted="1" name="Is playing" sid="4974775786828514" type="player1">
                                             <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="5762087075730112" type="player2">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Y co-ordinate">40</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -261,6 +284,10 @@
                                         <condition id="2" inverted="1" name="Is playing" sid="2332763806771777" type="player1">
                                             <param id="0" name="Animation">&quot;Jump&quot;</param>
                                         </condition>
+                                        <condition id="-2" name="Compare Y" sid="8796776748298537" type="player1">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Y co-ordinate">700</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="2637601712187547" type="player1">
@@ -279,6 +306,10 @@
                                         </condition>
                                         <condition id="2" inverted="1" name="Is playing" sid="1192699466769961" type="player1">
                                             <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="4940983061059643" type="player2">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Y co-ordinate">280</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -369,6 +400,21 @@
                         <action id="-1" name="Set X" sid="38670916473684" type="speaker">
                             <param id="0" name="X">Self.X + WindowWidth</param>
                         </action>
+                        <action id="4" name="Set animation" sid="7186734639466305" type="player2">
+                            <param id="0" name="Animation">&quot;Speaker&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7695639728678188" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1246224386056036" type="player2">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="7167324738924767" type="player2">
+                            <param id="0" name="Instance variable">isMaster</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="7575260851704729">
@@ -431,6 +477,10 @@
                                         <condition id="2" inverted="1" name="Is playing" sid="3809617092236932" type="player2">
                                             <param id="0" name="Animation">&quot;Jump&quot;</param>
                                         </condition>
+                                        <condition id="-2" name="Compare Y" sid="1595135744289661" type="player2">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Y co-ordinate">40</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="7038859312784181" type="player2">
@@ -449,6 +499,10 @@
                                         </condition>
                                         <condition id="2" inverted="1" name="Is playing" sid="4686827280404617" type="player2">
                                             <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="937649394732574" type="player1">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Y co-ordinate">440</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -476,6 +530,10 @@
                                         <condition id="2" inverted="1" name="Is playing" sid="3434447294843092" type="player2">
                                             <param id="0" name="Animation">&quot;Jump&quot;</param>
                                         </condition>
+                                        <condition id="-2" name="Compare Y" sid="429002366353221" type="player2">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Y co-ordinate">280</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-23" name="Move at angle" sid="4998916908257042" type="player2">
@@ -494,6 +552,10 @@
                                         </condition>
                                         <condition id="2" inverted="1" name="Is playing" sid="4023100226960384" type="player2">
                                             <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="9079276574475048" type="player1">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Y co-ordinate">700</param>
                                         </condition>
                                     </conditions>
                                     <actions>

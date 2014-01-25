@@ -118,6 +118,20 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="Speaker" pingpong="0" repeatcount="1" repeatto="0" sid="8955954858362552" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504762">
+                        <collision-poly>
+                            <point x="0.381818" y="0.771429" />
+                            <point x="0.463636" y="0.752381" />
+                            <point x="0.572728" y="0.761905" />
+                            <point x="0.681818" y="0.761905" />
+                            <point x="0.763636" y="0.895238" />
+                            <point x="0.5" y="0.980952" />
+                            <point x="0.0363636" y="0.961905" />
+                            <point x="0.272727" y="0.847619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="pin" sid="5987907474570772">
@@ -230,6 +244,20 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="Speaker" pingpong="0" repeatcount="1" repeatto="0" sid="7839947091719983" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.323529" y="0.833333" />
+                            <point x="0.490196" y="0.798246" />
+                            <point x="0.686274" y="0.921052" />
+                            <point x="0.578431" y="0.842106" />
+                            <point x="0.460784" y="0.789474" />
+                            <point x="0.803922" y="0.982456" />
+                            <point x="0.0392157" y="0.964912" />
+                            <point x="0.166667" y="0.912281" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Keyboard" sid="8746418119657375">
@@ -300,6 +328,14 @@
         </object-type>
         <object-type name="Mouse" sid="3430465769575323">
             <plugin id="Mouse" />
+        </object-type>
+        <object-type name="wall" sid="4796453616009536">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="347103911794325" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
