@@ -32,6 +32,9 @@
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="9448169479289799" type="slipper">
                             <param id="0" name="Angle">180</param>
                         </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="9668427232176093" type="speaker">
+                            <param id="0" name="Angle">180</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="6692683749453573">
@@ -76,7 +79,7 @@
                 </event-block>
                 <event-group description="" sid="7516261663386401" title="Hit">
                     <sub-events>
-                        <event-block sid="8441933492895279">
+                        <event-block collapsed="1" sid="8441933492895279">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="3476415438741679" type="player1">
                                     <param id="0" name="Object">pin</param>
@@ -136,6 +139,20 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="6207636502751746">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3900063188801376" type="player1">
+                                    <param id="0" name="Object">speaker</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="8625919493756898" type="player1">
+                                    <param id="0" name="Instance variable">isMaster</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="792456944012561" type="speaker" />
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="3474749077250257" title="Input">
@@ -168,12 +185,35 @@
                                     <param id="0" name="Key">87 (W)</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="7397023143893109" type="player1">
-                                    <param id="0" name="Angle">270</param>
-                                    <param id="1" name="Distance">5</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7989922651965144">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2230619585768262" type="player2">
+                                            <param id="0" name="Instance variable">isMaster</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="7397023143893109" type="player1">
+                                            <param id="0" name="Angle">270</param>
+                                            <param id="1" name="Distance">5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="846861492532555">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="9038324995894448" type="player1">
+                                            <param id="0" name="Instance variable">isMaster</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="9212507454261386" type="player2">
+                                            <param id="0" name="Angle">270</param>
+                                            <param id="1" name="Distance">5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="7139751261713367">
                             <conditions>
@@ -181,12 +221,35 @@
                                     <param id="0" name="Key">83 (S)</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="2637601712187547" type="player1">
-                                    <param id="0" name="Angle">90</param>
-                                    <param id="1" name="Distance">5</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5662101499300522">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3935009378548457" type="player2">
+                                            <param id="0" name="Instance variable">isMaster</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="2637601712187547" type="player1">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7516074612505826">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="5769310463780556" type="player1">
+                                            <param id="0" name="Instance variable">isMaster</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="9115762283617287" type="player2">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -253,6 +316,20 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-block sid="5935421429519107">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9401887388652661" type="player2">
+                            <param id="0" name="Object">speaker</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="3425706662006451" type="player2">
+                            <param id="0" name="Instance variable">isMaster</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9876259851691503" type="speaker" />
+                    </actions>
+                </event-block>
                 <event-block sid="7575260851704729">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="3448353832066746" type="player2">
@@ -297,12 +374,35 @@
                                     <param id="0" name="Key">38 (Up arrow)</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="7038859312784181" type="player2">
-                                    <param id="0" name="Angle">270</param>
-                                    <param id="1" name="Distance">5</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7196861436014003">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6047990271900381" type="player1">
+                                            <param id="0" name="Instance variable">isMaster</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="7038859312784181" type="player2">
+                                            <param id="0" name="Angle">270</param>
+                                            <param id="1" name="Distance">5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6305993969513034">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="6982586987591043" type="player2">
+                                            <param id="0" name="Instance variable">isMaster</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="6988008498790818" type="player1">
+                                            <param id="0" name="Angle">270</param>
+                                            <param id="1" name="Distance">5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="9229954276824622">
                             <conditions>
@@ -310,12 +410,35 @@
                                     <param id="0" name="Key">40 (Down arrow)</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="4998916908257042" type="player2">
-                                    <param id="0" name="Angle">90</param>
-                                    <param id="1" name="Distance">5</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4846287471969906">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8826469790684652" type="player1">
+                                            <param id="0" name="Instance variable">isMaster</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="4998916908257042" type="player2">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6225832040691804">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="2288774338899293" type="player2">
+                                            <param id="0" name="Instance variable">isMaster</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="9040057519350816" type="player1">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>

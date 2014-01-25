@@ -45,6 +45,8 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="life" sid="164655289858003" type="number" />
+                <instance-variable name="isMaster" sid="6260238700436615" type="boolean" />
+                <instance-variable name="isSlave" sid="1561116222974286" type="boolean" />
             </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9922581645999047" speed="2">
@@ -156,6 +158,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="life" sid="4781739941885663" type="number" />
+                <instance-variable name="isMaster" sid="6357751947274264" type="boolean" />
             </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274728871484281" speed="2">
@@ -255,6 +258,30 @@
                             <point x="0.5" y="0.965517" />
                             <point x="0.0964912" y="0.810345" />
                             <point x="0.0614035" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="speaker" sid="9755501387868381">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="797089707202042">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3892242816189969" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505747">
+                        <collision-poly>
+                            <point x="0.255319" y="0.275862" />
+                            <point x="0.5" y="0.229885" />
+                            <point x="0.904255" y="0.103448" />
+                            <point x="0.989362" y="0.494253" />
+                            <point x="0.882979" y="0.873563" />
+                            <point x="0.5" y="0.701149" />
+                            <point x="0.117021" y="0.873563" />
+                            <point x="0.0106383" y="0.494253" />
                         </collision-poly>
                     </frame>
                 </animation>
