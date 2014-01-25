@@ -10,6 +10,7 @@
     <unique-id>lpwx141mlkvi</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
     <used-behaviors>
@@ -20,8 +21,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>640</width>
-        <height>480</height>
+        <width>1024</width>
+        <height>768</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <use-loader-layout>0</use-loader-layout>
@@ -39,7 +40,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-type name="player" sid="5707695274674667">
+        <object-type name="player1" sid="5707695274674667">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9922581645999047" speed="5">
@@ -89,6 +90,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Keyboard" sid="8746418119657375">
+            <plugin id="Keyboard" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -96,8 +100,11 @@
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>SceneEvent.xml</event-sheet>
+        <event-sheet>PlayerEvent.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="10" />
+    </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
     <files-folder expanded="1">

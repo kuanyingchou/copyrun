@@ -4,12 +4,12 @@
     <sid>5968264416035639</sid>
     <event-sheet>SceneEvent</event-sheet>
     <size>
-        <width>1280</width>
-        <height>1024</height>
+        <width>1024</width>
+        <height>768</height>
     </size>
     <margins>
-        <horizontal>500</horizontal>
-        <vertical>500</vertical>
+        <horizontal>1024</horizontal>
+        <vertical>768</vertical>
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
@@ -52,8 +52,8 @@
                         <x>-1</x>
                         <y>1</y>
                         <z>0</z>
-                        <width>1600</width>
-                        <height>600</height>
+                        <width>2048</width>
+                        <height>768</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -299,7 +299,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="player" uid="9">
+                <instance type="player1" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
