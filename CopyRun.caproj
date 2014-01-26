@@ -322,7 +322,7 @@
         <object-type name="Over" sid="2178846772748278">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text" sid="7315320588727312">
+        <object-type name="1player" sid="7315320588727312">
             <plugin id="Text" />
         </object-type>
         <object-type name="Touch" sid="2268819348500522">
@@ -393,15 +393,18 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="2players" sid="6818805413787241">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout>Start.xml</layout>
         <layout>Game.xml</layout>
         <layout>Overp2.xml</layout>
         <layout>Overp1.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
+    <event-folder expanded="1">
         <event-sheet>GameEvent.xml</event-sheet>
         <event-sheet>Overp2Event.xml</event-sheet>
         <event-sheet>StartEvent.xml</event-sheet>
