@@ -601,6 +601,9 @@
                                                     <param id="1" name="Lower bound">6</param>
                                                     <param id="2" name="Upper bound">10</param>
                                                 </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6964726695362589" type="player1">
+                                                    <param id="0" name="Instance variable">isMaster</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="5515236507293005" type="Function">
@@ -622,6 +625,9 @@
                                                     <param id="1" name="Lower bound">2</param>
                                                     <param id="2" name="Upper bound">6</param>
                                                 </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9395797384240864" type="player1">
+                                                    <param id="0" name="Instance variable">isMaster</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="8329244754670885" type="Function">
@@ -641,7 +647,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-block collapsed="1" sid="2727284895992717">
+        <event-block sid="2727284895992717">
             <conditions>
                 <condition id="0" name="On function" sid="8084633676280412" type="Function">
                     <param id="0" name="Name">&quot;PlayerMoveUp&quot;</param>
