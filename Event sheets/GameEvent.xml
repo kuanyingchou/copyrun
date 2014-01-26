@@ -4,7 +4,7 @@
     <name>GameEvent</name>
     <events>
         <comment>1player or 2players mode</comment>
-        <variable constant="0" name="numberOfPlayer" sid="6795792162138103" static="0" type="number">1</variable>
+        <variable constant="0" name="numberOfPlayer" sid="6795792162138103" static="0" type="number">2</variable>
         <event-group collapsed="1" description="" sid="4313368447779565" title="SceneLoop">
             <sub-events>
                 <event-block sid="3561453315717872">
@@ -116,7 +116,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8775974028580874" title="Player1">
+        <event-group description="" sid="8775974028580874" title="Player1">
             <sub-events>
                 <event-block sid="1510345920897547">
                     <conditions>
@@ -191,6 +191,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="6628538724982858" type="Audio">
+                                    <param id="0" name="Audio file">dead</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="4" name="Set animation" sid="8719761611410359" type="player1">
                                     <param id="0" name="Animation">&quot;Dead&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -218,12 +224,55 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Play" sid="6447619771594603" type="Audio">
+                                            <param id="0" name="Audio file">AsWeAre</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                         <action id="-13" name="Set boolean" sid="8625919493756898" type="player1">
                                             <param id="0" name="Instance variable">isMaster</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action id="-3" name="Create object" sid="5834978825044675" type="System">
+                                            <param id="0" name="Object to create">MasterText</param>
+                                            <param id="1" name="Layer">3</param>
+                                            <param id="2" name="X">507</param>
+                                            <param id="3" name="Y">589</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="4637074056822251" type="System">
+                                            <param id="0" name="Object to create">SlaveText</param>
+                                            <param id="1" name="Layer">3</param>
+                                            <param id="2" name="X">507</param>
+                                            <param id="3" name="Y">131</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="9715590507737404" type="System">
+                                            <param id="0" name="Object to create">magiceffect</param>
+                                            <param id="1" name="Layer">3</param>
+                                            <param id="2" name="X">191</param>
+                                            <param id="3" name="Y">309</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="5573466046725753" type="magiceffect">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="4766150243008211" type="magiceffect">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="4892682497410206" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="3838516566512719" type="magiceffect" />
                                         <action id="4" name="Set animation" sid="3539861777174791" type="player1">
                                             <param id="0" name="Animation">&quot;Speaker&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="8889051013882227" type="player2down">
+                                            <param id="0" name="Animation">&quot;disable&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="3552771206549167" type="player2up">
+                                            <param id="0" name="Animation">&quot;disable&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="4749517812566779" type="System">
@@ -240,6 +289,16 @@
                                         <action id="-13" name="Set boolean" sid="1275828717154452" type="cup">
                                             <param id="0" name="Instance variable">isSpeaker</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="5736245497587751" type="MasterText" />
+                                        <action id="-9" name="Destroy" sid="4925220511401487" type="SlaveText" />
+                                        <action id="4" name="Set animation" sid="4353617547371976" type="player2down">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="8827856261701906" type="player2up">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -441,7 +500,7 @@
                 </event-block>
                 <event-group description="" sid="9874605663161816" title="Hit2">
                     <sub-events>
-                        <event-block collapsed="1" sid="5935421429519107">
+                        <event-block sid="5935421429519107">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="9401887388652661" type="player2">
                                     <param id="0" name="Object">cup</param>
@@ -456,10 +515,45 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Play" sid="4378726588112456" type="Audio">
+                                            <param id="0" name="Audio file">AsWeAre</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                         <action id="-13" name="Set boolean" sid="3425706662006451" type="player2">
                                             <param id="0" name="Instance variable">isMaster</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action id="-3" name="Create object" sid="2219731690387312" type="System">
+                                            <param id="0" name="Object to create">MasterText</param>
+                                            <param id="1" name="Layer">3</param>
+                                            <param id="2" name="X">507</param>
+                                            <param id="3" name="Y">131</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="9995619820900691" type="System">
+                                            <param id="0" name="Object to create">SlaveText</param>
+                                            <param id="1" name="Layer">3</param>
+                                            <param id="2" name="X">507</param>
+                                            <param id="3" name="Y">589</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="1526561677128266" type="System">
+                                            <param id="0" name="Object to create">magiceffect</param>
+                                            <param id="1" name="Layer">3</param>
+                                            <param id="2" name="X">191</param>
+                                            <param id="3" name="Y">309</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="7329210808066398" type="magiceffect">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="1236402438048614" type="magiceffect">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="2922702258733491" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="4043815014312472" type="magiceffect" />
                                         <action id="4" name="Set animation" sid="7186734639466305" type="player2">
                                             <param id="0" name="Animation">&quot;Speaker&quot;</param>
                                             <param id="1" name="From">1</param>
@@ -479,6 +573,8 @@
                                             <param id="0" name="Instance variable">isSpeaker</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action id="-9" name="Destroy" sid="9051878118300047" type="MasterText" />
+                                        <action id="-9" name="Destroy" sid="4308870164901881" type="SlaveText" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="3478639298874481">
@@ -566,6 +662,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="7237090620291595" type="Audio">
+                            <param id="0" name="Audio file">dead</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="4" name="Set animation" sid="8756493233124895" type="player2">
                             <param id="0" name="Animation">&quot;Dead&quot;</param>
                             <param id="1" name="From">1</param>
@@ -998,8 +1100,9 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group collapsed="1" description="" sid="8982537659572771" title="RandomCup">
+        <event-group description="" sid="8982537659572771" title="RandomCup">
             <sub-events>
+                <variable constant="0" name="randCupNum" sid="7847391744116599" static="0" type="number">0</variable>
                 <event-block sid="6368788958615093">
                     <conditions>
                         <condition id="0" name="On function" sid="1578182120053499" type="Function">
@@ -1029,7 +1132,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <variable constant="0" name="randCupNum" sid="7847391744116599" static="0" type="number">0</variable>
                 <event-block sid="6522725791064087">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="7881554420719108" type="System" />
@@ -1038,19 +1140,6 @@
                         <action id="0" name="Call function" sid="7019126940265928" type="Function">
                             <param id="0" name="Name">&quot;PickCup&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="5668004340029547">
-                    <conditions>
-                        <condition id="-16" name="Pick random instance" sid="3667693553294926" type="System">
-                            <param id="0" name="Object">cup</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="5180373773736902" type="cup">
-                            <param id="0" name="Instance variable">isSpeaker</param>
-                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
