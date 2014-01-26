@@ -271,10 +271,13 @@
                 <event-group description="" sid="3474749077250257" title="Input">
                     <sub-events>
                         <comment>Player1 Jump</comment>
-                        <event-block sid="9710237286149235">
+                        <event-block any="1" sid="9710237286149235">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="1913502586996376" type="Keyboard">
-                                    <param id="0" name="Key">68 (D)</param>
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition id="3" name="On touched object" sid="2849625526430787" type="Touch">
+                                    <param id="0" name="Object">player1jump</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -292,8 +295,11 @@
                             </actions>
                         </event-block>
                         <comment>Player1 Move</comment>
-                        <event-block sid="5823229941895905">
+                        <event-block any="1" sid="5823229941895905">
                             <conditions>
+                                <condition id="4" name="Is touching object" sid="3798383820617008" type="Touch">
+                                    <param id="0" name="Object">player1up</param>
+                                </condition>
                                 <condition id="2" name="Key is down" sid="6625716880163335" type="Keyboard">
                                     <param id="0" name="Key">87 (W)</param>
                                 </condition>
@@ -345,10 +351,13 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="7139751261713367">
+                        <event-block any="1" sid="7139751261713367">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="7202674297505212" type="Keyboard">
                                     <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                                <condition id="4" name="Is touching object" sid="5552697427543644" type="Touch">
+                                    <param id="0" name="Object">player1down</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -555,80 +564,86 @@
                 </event-block>
                 <event-group description="" sid="2255111920853781" title="Input2">
                     <sub-events>
-                        <event-block sid="7751503742728986">
+                        <event-block sid="563472181223749">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="8652045774866821" type="Keyboard">
-                                    <param id="0" name="Key">37 (Left arrow)</param>
-                                </condition>
                                 <condition id="-14" name="Compare variable" sid="5212731803130845" type="System">
                                     <param id="0" name="Variable">numberOfPlayer</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="4109691364321041" type="player2">
-                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="8668512443660745" type="System">
-                                    <param id="0" name="Seconds">2</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="7597011610470758" type="player2">
-                                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="7751503742728986">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="8652045774866821" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="7423645349503063" type="Touch">
+                                            <param id="0" name="Object">player2jump</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="4109691364321041" type="player2">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="8668512443660745" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="7597011610470758" type="player2">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="9229954276824622">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="329535832763759" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="7058695044592493" type="Touch">
+                                            <param id="0" name="Object">player2down</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="728988201356249">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="9244770313235653" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerMoveDown&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="8908183057062071">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="9122985595302454" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="5482762536915657" type="Touch">
+                                            <param id="0" name="Object">player2up</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="725135660104513">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="4055279529951973" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerMoveUp&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Player2 Move(2player mode)</comment>
-                        <event-block sid="8908183057062071">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="9122985595302454" type="Keyboard">
-                                    <param id="0" name="Key">38 (Up arrow)</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="1439693521803988" type="System">
-                                    <param id="0" name="Variable">numberOfPlayer</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="725135660104513">
-                                    <conditions />
-                                    <actions>
-                                        <action id="0" name="Call function" sid="4055279529951973" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerMoveUp&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="9229954276824622">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="329535832763759" type="Keyboard">
-                                    <param id="0" name="Key">40 (Down arrow)</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="5361136417226748" type="System">
-                                    <param id="0" name="Variable">numberOfPlayer</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="728988201356249">
-                                    <conditions />
-                                    <actions>
-                                        <action id="0" name="Call function" sid="9244770313235653" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerMoveDown&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
                         <event-block sid="3629894863476463">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="2062883770988919" type="System" />
@@ -639,7 +654,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="7323778497646728">
+                        <event-block collapsed="1" sid="7323778497646728">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="9072396498794981" type="System">
                                     <param id="0" name="Variable">numberOfPlayer</param>
@@ -830,7 +845,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="8982537659572771" title="RandomCup">
+        <event-group collapsed="1" description="" sid="8982537659572771" title="RandomCup">
             <sub-events>
                 <event-block sid="6368788958615093">
                     <conditions>
