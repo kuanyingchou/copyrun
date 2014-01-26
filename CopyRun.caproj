@@ -30,7 +30,7 @@
         <height>768</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
-    <first-layout>Start</first-layout>
+    <first-layout>Cover</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -635,6 +635,17 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite" sid="1594370869404803">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1903483917186096" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Start" sid="1613990174391006">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -642,12 +653,14 @@
         <layout>Game.xml</layout>
         <layout>Overp2.xml</layout>
         <layout>Overp1.xml</layout>
+        <layout>Cover.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>GameEvent.xml</event-sheet>
         <event-sheet>Overp2Event.xml</event-sheet>
         <event-sheet>StartEvent.xml</event-sheet>
         <event-sheet>Overp1Event.xml</event-sheet>
+        <event-sheet>CoverEvent.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="10" />
