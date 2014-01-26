@@ -403,6 +403,9 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8617706145814184" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
+                <animation framecount="1" loop="0" name="disable" pingpong="0" repeatcount="1" repeatto="0" sid="9727306688011823" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="player1down" sid="1005408528904328">
@@ -417,6 +420,9 @@
                             <point x="1" y="0" />
                         </collision-poly>
                     </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="disable" pingpong="0" repeatcount="1" repeatto="0" sid="4493566774566822" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -441,12 +447,18 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="disable" pingpong="0" repeatcount="1" repeatto="0" sid="8392522438831809" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="player2up" sid="5493731637775245">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9289437818907965" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="disable" pingpong="0" repeatcount="1" repeatto="0" sid="2567455601889769" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -472,6 +484,12 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="MasterText" sid="4358731025557905">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SlaveText" sid="2614840545547299">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
