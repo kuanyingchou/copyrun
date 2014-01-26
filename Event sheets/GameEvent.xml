@@ -116,7 +116,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8775974028580874" title="Player1">
+        <event-group description="" sid="8775974028580874" title="Player1">
             <sub-events>
                 <event-block sid="1510345920897547">
                     <conditions>
@@ -191,6 +191,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="6628538724982858" type="Audio">
+                                    <param id="0" name="Audio file">dead</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="4" name="Set animation" sid="8719761611410359" type="player1">
                                     <param id="0" name="Animation">&quot;Dead&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -218,6 +224,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Play" sid="6447619771594603" type="Audio">
+                                            <param id="0" name="Audio file">AsWeAre</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                         <action id="-13" name="Set boolean" sid="8625919493756898" type="player1">
                                             <param id="0" name="Instance variable">isMaster</param>
                                             <param id="1" name="Value">1</param>
@@ -411,7 +423,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1770796208970667" title="Player2">
+        <event-group collapsed="1" description="" sid="1770796208970667" title="Player2">
             <sub-events>
                 <event-block sid="9158000800769025">
                     <conditions>
@@ -441,7 +453,7 @@
                 </event-block>
                 <event-group description="" sid="9874605663161816" title="Hit2">
                     <sub-events>
-                        <event-block collapsed="1" sid="5935421429519107">
+                        <event-block sid="5935421429519107">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="9401887388652661" type="player2">
                                     <param id="0" name="Object">cup</param>
@@ -456,6 +468,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Play" sid="4378726588112456" type="Audio">
+                                            <param id="0" name="Audio file">AsWeAre</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                         <action id="-13" name="Set boolean" sid="3425706662006451" type="player2">
                                             <param id="0" name="Instance variable">isMaster</param>
                                             <param id="1" name="Value">1</param>
@@ -566,6 +584,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="7237090620291595" type="Audio">
+                            <param id="0" name="Audio file">dead</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="4" name="Set animation" sid="8756493233124895" type="player2">
                             <param id="0" name="Animation">&quot;Dead&quot;</param>
                             <param id="1" name="From">1</param>
@@ -861,7 +885,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group collapsed="1" description="" sid="8982537659572771" title="RandomCup">
+        <event-group description="" sid="8982537659572771" title="RandomCup">
             <sub-events>
                 <event-block sid="6368788958615093">
                     <conditions>
