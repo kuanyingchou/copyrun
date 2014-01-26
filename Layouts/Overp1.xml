@@ -62,7 +62,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <life>3</life>
+                        <life>100</life>
                         <isMaster>false</isMaster>
                     </instance-variables>
                     <blend-mode>0</blend-mode>

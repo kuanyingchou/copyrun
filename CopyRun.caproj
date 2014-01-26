@@ -366,6 +366,33 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="cup" sid="8677293387756539">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="isSpeaker" sid="9968397449805126" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="666255947484265">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9101945866984681" speed="5">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.506173">
+                        <collision-poly>
+                            <point x="0.026087" y="0.037037" />
+                            <point x="0.495652" y="0.0123457" />
+                            <point x="0.947826" y="0.0740741" />
+                            <point x="1" y="0.493827" />
+                            <point x="0.973913" y="0.962963" />
+                            <point x="0.495652" y="0.987654" />
+                            <point x="0.0521739" y="0.925926" />
+                            <point x="0" y="0.493827" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="0">

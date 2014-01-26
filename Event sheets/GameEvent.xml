@@ -4,7 +4,7 @@
     <name>GameEvent</name>
     <events>
         <comment>1player or 2players mode</comment>
-        <variable constant="0" name="is1Player" sid="6795792162138103" static="0" type="number">1</variable>
+        <variable constant="0" name="is1Player" sid="6795792162138103" static="0" type="number">0</variable>
         <event-group description="" sid="4313368447779565" title="SceneLoop">
             <sub-events>
                 <event-block sid="3561453315717872">
@@ -34,7 +34,7 @@
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="9448169479289799" type="slipper">
                             <param id="0" name="Angle">180</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="9668427232176093" type="speaker">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="9668427232176093" type="cup">
                             <param id="0" name="Angle">180</param>
                         </action>
                         <action id="0" name="Play" sid="1998043219072083" type="Audio">
@@ -76,16 +76,30 @@
                 </event-block>
                 <event-block sid="3314997950902131">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="1165232777771823" type="speaker">
+                        <condition id="-1" name="Compare X" sid="1165232777771823" type="cup">
                             <param id="0" name="Comparison">3</param>
                             <param id="1" name="X co-ordinate">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-1" name="Set X" sid="1244919111591938" type="speaker">
-                            <param id="0" name="X">Self.X + WindowWidth</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2170264627007579">
+                            <conditions>
+                                <condition id="-19" name="Pick all" sid="6610030634205061" type="System">
+                                    <param id="0" name="Object">cup</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="1244919111591938" type="cup">
+                                    <param id="0" name="X">Self.X + WindowWidth</param>
+                                </action>
+                                <action id="0" name="Call function" sid="1835691518175621" type="Function">
+                                    <param id="0" name="Name">&quot;PickCup&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7402249655514939">
                     <conditions>
@@ -102,7 +116,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8775974028580874" title="Player1">
+        <event-group description="" sid="8775974028580874" title="Player1">
             <sub-events>
                 <event-block sid="1510345920897547">
                     <conditions>
@@ -192,37 +206,69 @@
                         <event-block sid="6207636502751746">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="3900063188801376" type="player1">
-                                    <param id="0" name="Object">speaker</param>
+                                    <param id="0" name="Object">cup</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="8625919493756898" type="player1">
-                                    <param id="0" name="Instance variable">isMaster</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-1" name="Set X" sid="1895593056734693" type="speaker">
-                                    <param id="0" name="X">self.X + WindowWidth</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="3539861777174791" type="player1">
-                                    <param id="0" name="Animation">&quot;Speaker&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="4749517812566779" type="System">
-                                    <param id="0" name="Seconds">3.0</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="4929907902123801" type="player1">
-                                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="8100242972536068" type="player1">
-                                    <param id="0" name="Instance variable">isMaster</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6517024427047869">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="705518040220779" type="cup">
+                                            <param id="0" name="Instance variable">isSpeaker</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="8625919493756898" type="player1">
+                                            <param id="0" name="Instance variable">isMaster</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="3539861777174791" type="player1">
+                                            <param id="0" name="Animation">&quot;Speaker&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="4749517812566779" type="System">
+                                            <param id="0" name="Seconds">3.0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="4929907902123801" type="player1">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="8100242972536068" type="player1">
+                                            <param id="0" name="Instance variable">isMaster</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="1275828717154452" type="cup">
+                                            <param id="0" name="Instance variable">isSpeaker</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="646788867139083">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="1462707761226387" type="System">
+                                            <param id="0" name="Object">cup</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="1895593056734693" type="cup">
+                                            <param id="0" name="X">self.X + WindowWidth</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4220117761298774">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="6009013908788839" type="Function">
+                                            <param id="0" name="Name">&quot;PickCup&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="3474749077250257" title="Input">
+                <event-group description="" sid="3474749077250257" title="Input">
                     <sub-events>
                         <comment>Player1 Jump</comment>
                         <event-block sid="9710237286149235">
@@ -427,33 +473,65 @@
                 <event-block sid="5935421429519107">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9401887388652661" type="player2">
-                            <param id="0" name="Object">speaker</param>
+                            <param id="0" name="Object">cup</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="3425706662006451" type="player2">
-                            <param id="0" name="Instance variable">isMaster</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-1" name="Set X" sid="38670916473684" type="speaker">
-                            <param id="0" name="X">Self.X + WindowWidth</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="7186734639466305" type="player2">
-                            <param id="0" name="Animation">&quot;Speaker&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="7695639728678188" type="System">
-                            <param id="0" name="Seconds">3.0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="1246224386056036" type="player2">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="7167324738924767" type="player2">
-                            <param id="0" name="Instance variable">isMaster</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1601167140814419">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2492160154972651" type="cup">
+                                    <param id="0" name="Instance variable">isSpeaker</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="3425706662006451" type="player2">
+                                    <param id="0" name="Instance variable">isMaster</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="7186734639466305" type="player2">
+                                    <param id="0" name="Animation">&quot;Speaker&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7695639728678188" type="System">
+                                    <param id="0" name="Seconds">3.0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="1246224386056036" type="player2">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="7167324738924767" type="player2">
+                                    <param id="0" name="Instance variable">isMaster</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="5739983163469305" type="cup">
+                                    <param id="0" name="Instance variable">isSpeaker</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3478639298874481">
+                            <conditions>
+                                <condition id="-19" name="Pick all" sid="1330478584174913" type="System">
+                                    <param id="0" name="Object">cup</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="38670916473684" type="cup">
+                                    <param id="0" name="X">Self.X + WindowWidth</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9861009083960347">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="7618863902737381" type="Function">
+                                    <param id="0" name="Name">&quot;PickCup&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7575260851704729">
                     <conditions>
@@ -647,7 +725,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-block sid="2727284895992717">
+        <event-block collapsed="1" sid="2727284895992717">
             <conditions>
                 <condition id="0" name="On function" sid="8084633676280412" type="Function">
                     <param id="0" name="Name">&quot;PlayerMoveUp&quot;</param>
@@ -753,5 +831,63 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-group description="" sid="8982537659572771" title="RandomCup">
+            <sub-events>
+                <event-block sid="6368788958615093">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1578182120053499" type="Function">
+                            <param id="0" name="Name">&quot;PickCup&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3001896924648198" type="System">
+                            <param id="0" name="Variable">randCupNum</param>
+                            <param id="1" name="Value">int(random(0,3))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2191012206699768">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="3126411519454004" type="System">
+                                    <param id="0" name="Object">cup</param>
+                                    <param id="1" name="Instance">randCupNum</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="5400300990049434" type="cup">
+                                    <param id="0" name="Instance variable">isSpeaker</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <variable constant="0" name="randCupNum" sid="7847391744116599" static="0" type="number">0</variable>
+                <event-block sid="6522725791064087">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="7881554420719108" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="7019126940265928" type="Function">
+                            <param id="0" name="Name">&quot;PickCup&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="5668004340029547">
+                    <conditions>
+                        <condition id="-16" name="Pick random instance" sid="3667693553294926" type="System">
+                            <param id="0" name="Object">cup</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="5180373773736902" type="cup">
+                            <param id="0" name="Instance variable">isSpeaker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
