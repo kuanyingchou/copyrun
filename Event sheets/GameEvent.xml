@@ -267,6 +267,10 @@
                                             <param id="0" name="Animation">&quot;Speaker&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="4" name="Set animation" sid="750001268489992" type="player2">
+                                            <param id="0" name="Animation">&quot;BeControl&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
                                         <action id="4" name="Set animation" sid="8889051013882227" type="player2down">
                                             <param id="0" name="Animation">&quot;disable&quot;</param>
                                             <param id="1" name="From">1</param>
@@ -297,6 +301,10 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="8827856261701906" type="player2up">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="5406440472441721" type="player2">
                                             <param id="0" name="Animation">&quot;Default&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -543,6 +551,22 @@
                                             <param id="2" name="X">191</param>
                                             <param id="3" name="Y">309</param>
                                         </action>
+                                        <action id="4" name="Set animation" sid="7186734639466305" type="player2">
+                                            <param id="0" name="Animation">&quot;Speaker&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="1404720787631918" type="player1">
+                                            <param id="0" name="Animation">&quot;BeControl&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="1520987813991411" type="player1down">
+                                            <param id="0" name="Animation">&quot;disable&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="268512811484335" type="player1up">
+                                            <param id="0" name="Animation">&quot;disable&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
                                         <action id="-8" name="Set angle" sid="7329210808066398" type="magiceffect">
                                             <param id="0" name="Angle">180</param>
                                         </action>
@@ -554,10 +578,6 @@
                                             <param id="0" name="Seconds">0.5</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="4043815014312472" type="magiceffect" />
-                                        <action id="4" name="Set animation" sid="7186734639466305" type="player2">
-                                            <param id="0" name="Animation">&quot;Speaker&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
                                         <action id="-16" name="Wait" sid="7695639728678188" type="System">
                                             <param id="0" name="Seconds">3.0</param>
                                         </action>
@@ -575,6 +595,18 @@
                                         </action>
                                         <action id="-9" name="Destroy" sid="9051878118300047" type="MasterText" />
                                         <action id="-9" name="Destroy" sid="4308870164901881" type="SlaveText" />
+                                        <action id="4" name="Set animation" sid="7694089057483133" type="player1">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="6177521792290888" type="player1down">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="450971242730439" type="player1up">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="3478639298874481">
