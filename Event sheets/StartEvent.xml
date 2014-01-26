@@ -10,6 +10,18 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="9" name="Set scale" sid="965907892542814" type="1playerbutton">
+                    <param id="0" name="Scale">1.05</param>
+                </action>
+                <action id="-16" name="Wait" sid="8035807332661755" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="9" name="Set scale" sid="8034335816339272" type="1playerbutton">
+                    <param id="0" name="Scale">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="3764958428085491" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
                 <action id="-25" name="Go to layout (by name)" sid="262377686498185" type="System">
                     <param id="0" name="Layout">&quot;Game&quot;</param>
                 </action>
@@ -26,6 +38,18 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="9" name="Set scale" sid="7822869400862268" type="2playerbutton">
+                    <param id="0" name="Scale">1.05</param>
+                </action>
+                <action id="-16" name="Wait" sid="9092860626455736" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="9" name="Set scale" sid="8976625716004626" type="2playerbutton">
+                    <param id="0" name="Scale">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6850327789153245" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="9208269709186325" type="System">
                     <param id="0" name="Layout">Game</param>
                 </action>
