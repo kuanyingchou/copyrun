@@ -250,7 +250,7 @@
                                             <param id="0" name="Object to create">magiceffect</param>
                                             <param id="1" name="Layer">3</param>
                                             <param id="2" name="X">191</param>
-                                            <param id="3" name="Y">375</param>
+                                            <param id="3" name="Y">309</param>
                                         </action>
                                         <action id="-8" name="Set angle" sid="5573466046725753" type="magiceffect">
                                             <param id="0" name="Angle">0</param>
@@ -259,6 +259,10 @@
                                             <param id="0" name="Animation">&quot;Default&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="-16" name="Wait" sid="4892682497410206" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="3838516566512719" type="magiceffect" />
                                         <action id="4" name="Set animation" sid="3539861777174791" type="player1">
                                             <param id="0" name="Animation">&quot;Speaker&quot;</param>
                                             <param id="1" name="From">1</param>
@@ -286,7 +290,6 @@
                                             <param id="0" name="Instance variable">isSpeaker</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="-9" name="Destroy" sid="3838516566512719" type="magiceffect" />
                                         <action id="-9" name="Destroy" sid="5736245497587751" type="MasterText" />
                                         <action id="-9" name="Destroy" sid="4925220511401487" type="SlaveText" />
                                         <action id="4" name="Set animation" sid="4353617547371976" type="player2down">
@@ -467,7 +470,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1770796208970667" title="Player2">
+        <event-group description="" sid="1770796208970667" title="Player2">
             <sub-events>
                 <event-block sid="9158000800769025">
                     <conditions>
@@ -538,7 +541,7 @@
                                             <param id="0" name="Object to create">magiceffect</param>
                                             <param id="1" name="Layer">3</param>
                                             <param id="2" name="X">191</param>
-                                            <param id="3" name="Y">375</param>
+                                            <param id="3" name="Y">309</param>
                                         </action>
                                         <action id="-8" name="Set angle" sid="7329210808066398" type="magiceffect">
                                             <param id="0" name="Angle">180</param>
@@ -548,8 +551,9 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="2922702258733491" type="System">
-                                            <param id="0" name="Seconds">0.3</param>
+                                            <param id="0" name="Seconds">0.5</param>
                                         </action>
+                                        <action id="-9" name="Destroy" sid="4043815014312472" type="magiceffect" />
                                         <action id="4" name="Set animation" sid="7186734639466305" type="player2">
                                             <param id="0" name="Animation">&quot;Speaker&quot;</param>
                                             <param id="1" name="From">1</param>
@@ -569,7 +573,6 @@
                                             <param id="0" name="Instance variable">isSpeaker</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="-9" name="Destroy" sid="4043815014312472" type="magiceffect" />
                                         <action id="-9" name="Destroy" sid="9051878118300047" type="MasterText" />
                                         <action id="-9" name="Destroy" sid="4308870164901881" type="SlaveText" />
                                     </actions>

@@ -6,7 +6,7 @@
         <event-block sid="6399497587660519">
             <conditions>
                 <condition id="3" name="On touched object" sid="3901365688054002" type="Touch">
-                    <param id="0" name="Object">1player</param>
+                    <param id="0" name="Object">1playerbutton</param>
                 </condition>
             </conditions>
             <actions>
@@ -22,7 +22,7 @@
         <event-block sid="4092588201637871">
             <conditions>
                 <condition id="3" name="On touched object" sid="4180083603543306" type="Touch">
-                    <param id="0" name="Object">2players</param>
+                    <param id="0" name="Object">2playerbutton</param>
                 </condition>
             </conditions>
             <actions>
