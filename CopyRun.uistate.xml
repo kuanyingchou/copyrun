@@ -12,8 +12,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout>Game</layout>
         <layout>Overp2</layout>
-        <layout active="1">Start</layout>
-        <event-sheet>GameEvent</event-sheet>
+        <layout>Start</layout>
+        <event-sheet active="1">GameEvent</event-sheet>
         <event-sheet>Overp1Event</event-sheet>
         <event-sheet>Overp2Event</event-sheet>
         <event-sheet>StartEvent</event-sheet>
