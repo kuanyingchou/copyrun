@@ -123,14 +123,15 @@
                         <condition id="-2" name="On start of layout" sid="8792768314206321" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="4878976085858877" type="player1_life">
-                            <param id="0" name="Text">player1.life</param>
+                        <action id="5" name="Set frame" sid="4878976085858877" type="Player1Blood">
+                            <param id="0" name="Frame number">3-player1.life</param>
                         </action>
+                        <action id="2" name="Stop" sid="8343025929563815" type="Player1Blood" />
                     </actions>
                 </event-block>
                 <event-group description="" sid="7516261663386401" title="Hit">
                     <sub-events>
-                        <event-block collapsed="1" sid="8441933492895279">
+                        <event-block sid="8441933492895279">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="3476415438741679" type="player1">
                                     <param id="0" name="Object">pin</param>
@@ -164,8 +165,8 @@
                                             <param id="0" name="Instance variable">life</param>
                                             <param id="1" name="Value">-1</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="8569289992297763" type="player1_life">
-                                            <param id="0" name="Text">player1.life</param>
+                                        <action id="5" name="Set frame" sid="8569289992297763" type="Player1Blood">
+                                            <param id="0" name="Frame number">3- player1.life</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="1676018605309487" type="player1">
                                             <param id="0" name="Animation">&quot;Hit&quot;</param>
@@ -491,9 +492,10 @@
                         <condition id="-2" name="On start of layout" sid="305031335536702" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="1039087643724339" type="player2_life">
-                            <param id="0" name="Text">player2.life</param>
+                        <action id="5" name="Set frame" sid="1039087643724339" type="Player2Blood">
+                            <param id="0" name="Frame number">3-player2.life</param>
                         </action>
+                        <action id="2" name="Stop" sid="1508107216865622" type="Player2Blood" />
                     </actions>
                     <sub-events>
                         <event-block sid="3066623666617128">
@@ -671,8 +673,8 @@
                                             <param id="0" name="Instance variable">life</param>
                                             <param id="1" name="Value">-1</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="8569289992297763" type="player2_life">
-                                            <param id="0" name="Text">player2.life</param>
+                                        <action id="5" name="Set frame" sid="8569289992297763" type="Player2Blood">
+                                            <param id="0" name="Frame number">3-player2.life</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="4435082161285856" type="player2">
                                             <param id="0" name="Animation">&quot;Hit&quot;</param>

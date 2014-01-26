@@ -646,6 +646,82 @@
         <object-type name="Start" sid="1613990174391006">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Player1Blood" sid="5981239956862859">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="0" name="blood3" pingpong="0" repeatcount="1" repeatto="0" sid="8266486642517555" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0833333" y="0.242424" />
+                            <point x="0.5" y="0.272727" />
+                            <point x="0.921875" y="0.227273" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.890625" y="0.681818" />
+                            <point x="0.5" y="0.848485" />
+                            <point x="0.114583" y="0.666667" />
+                            <point x="0.0729167" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.5" y="0.272727" />
+                            <point x="0.921875" y="0.227273" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.890625" y="0.681818" />
+                            <point x="0.5" y="0.848485" />
+                            <point x="0.390625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.921875" y="0.227273" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.890625" y="0.681818" />
+                            <point x="0.692708" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Player2Blood" sid="1729243049227721">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="0" name="blood3" pingpong="0" repeatcount="1" repeatto="0" sid="936661745598376" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0833333" y="0.242424" />
+                            <point x="0.5" y="0.272727" />
+                            <point x="0.921875" y="0.227273" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.890625" y="0.681818" />
+                            <point x="0.5" y="0.848485" />
+                            <point x="0.114583" y="0.666667" />
+                            <point x="0.0729167" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.5" y="0.272727" />
+                            <point x="0.921875" y="0.227273" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.890625" y="0.681818" />
+                            <point x="0.5" y="0.848485" />
+                            <point x="0.390625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.921875" y="0.227273" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.890625" y="0.681818" />
+                            <point x="0.692708" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
