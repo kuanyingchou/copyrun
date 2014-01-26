@@ -413,7 +413,7 @@
         </event-group>
         <event-group description="" sid="1770796208970667" title="Player2">
             <sub-events>
-                <event-block sid="9158000800769025">
+                <event-block collapsed="1" sid="9158000800769025">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="305031335536702" type="System" />
                     </conditions>
@@ -580,7 +580,220 @@
                 </event-block>
                 <event-group description="" sid="2255111920853781" title="Input2">
                     <sub-events>
-                        <event-block sid="563472181223749">
+                        <event-group description="" sid="6553106000848543" title="AI">
+                            <sub-events>
+                                <event-block sid="7323778497646728">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9072396498794981" type="System">
+                                            <param id="0" name="Variable">numberOfPlayer</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <variable constant="0" name="randDist" sid="4328610747564765" static="0" type="number">0</variable>
+                                        <variable constant="0" name="randMove" sid="931417035981457" static="0" type="number">0</variable>
+                                        <event-block collapsed="1" sid="6686963472828823">
+                                            <conditions>
+                                                <condition id="0" name="On collision with another object" sid="9326363082051716" type="FarTrigger">
+                                                    <param id="0" name="Object">slipper</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="6549382309360606">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6964726695362589" type="player1">
+                                                            <param id="0" name="Instance variable">isMaster</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="6960409431189115" type="System">
+                                                            <param id="0" name="Variable">randMove</param>
+                                                            <param id="1" name="Value">random(1)</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="9118116239460968" type="System">
+                                                            <param id="0" name="Variable">randDist</param>
+                                                            <param id="1" name="Value">random(10,40)</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="9641241006249655">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="3464791944358825" type="System">
+                                                                    <param id="0" name="First value">randMove</param>
+                                                                    <param id="1" name="Comparison">2</param>
+                                                                    <param id="2" name="Second value">0.5</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="5664935080101476">
+                                                                    <conditions>
+                                                                        <condition id="-12" name="Repeat" sid="9610686210326059" type="System">
+                                                                            <param id="0" name="Count">int(randDist)</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="5515236507293005" type="Function">
+                                                                            <param id="0" name="Name">&quot;PlayerMoveDown&quot;</param>
+                                                                            <param id="1" name="Parameter {n}"></param>
+                                                                        </action>
+                                                                        <action id="-16" name="Wait" sid="789047492815284" type="System">
+                                                                            <param id="0" name="Seconds">0.2</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="5088431592111626">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="2922846559304621" type="System">
+                                                                    <param id="0" name="First value">randMove</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Second value">0.5</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="1470651168955234">
+                                                                    <conditions>
+                                                                        <condition id="-12" name="Repeat" sid="190869304028548" type="System">
+                                                                            <param id="0" name="Count">int(randDist)</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="8329244754670885" type="Function">
+                                                                            <param id="0" name="Name">&quot;PlayerMoveUp&quot;</param>
+                                                                            <param id="1" name="Parameter {n}"></param>
+                                                                        </action>
+                                                                        <action id="-16" name="Wait" sid="5795109706745753" type="System">
+                                                                            <param id="0" name="Seconds">0.1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block collapsed="1" sid="1425294954223971">
+                                            <conditions>
+                                                <condition id="0" name="On collision with another object" sid="7947294430318564" type="FarTrigger">
+                                                    <param id="0" name="Object">cup</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="1067294303625829">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2802030549477489" type="player1">
+                                                            <param id="0" name="Instance variable">isMaster</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="2408049019489788" type="System">
+                                                            <param id="0" name="Variable">randMove</param>
+                                                            <param id="1" name="Value">random(1)</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="3527497568813749" type="System">
+                                                            <param id="0" name="Variable">randDist</param>
+                                                            <param id="1" name="Value">random(10,40)</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="6636267388617555">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="9845267450759382" type="System">
+                                                                    <param id="0" name="First value">randMove</param>
+                                                                    <param id="1" name="Comparison">2</param>
+                                                                    <param id="2" name="Second value">0.5</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="3517190529948078">
+                                                                    <conditions>
+                                                                        <condition id="-12" name="Repeat" sid="4185214753593105" type="System">
+                                                                            <param id="0" name="Count">int(randDist)</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="7690610267395589" type="Function">
+                                                                            <param id="0" name="Name">&quot;PlayerMoveDown&quot;</param>
+                                                                            <param id="1" name="Parameter {n}"></param>
+                                                                        </action>
+                                                                        <action id="-16" name="Wait" sid="9757584871084624" type="System">
+                                                                            <param id="0" name="Seconds">0.1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="4792907695864222">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="2537961118524897" type="System">
+                                                                    <param id="0" name="First value">randMove</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Second value">0.5</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="9620465629903169">
+                                                                    <conditions>
+                                                                        <condition id="-12" name="Repeat" sid="8464734101157013" type="System">
+                                                                            <param id="0" name="Count">int(randDist)</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="6191954256479525" type="Function">
+                                                                            <param id="0" name="Name">&quot;PlayerMoveUp&quot;</param>
+                                                                            <param id="1" name="Parameter {n}"></param>
+                                                                        </action>
+                                                                        <action id="-16" name="Wait" sid="9735708706803943" type="System">
+                                                                            <param id="0" name="Seconds">0.1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="5740337954351013">
+                                            <conditions>
+                                                <condition id="0" name="On collision with another object" sid="6539488996578995" type="NearTrigger">
+                                                    <param id="0" name="Object">slipper</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="8837794496823597" type="System">
+                                                    <param id="0" name="First value">randMove</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">0.8</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="1965181153331427" type="player2">
+                                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="4834322146303434" type="System">
+                                                    <param id="0" name="Seconds">2</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="1770322302340989" type="player2">
+                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-block collapsed="1" sid="563472181223749">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="5212731803130845" type="System">
                                     <param id="0" name="Variable">numberOfPlayer</param>
@@ -659,103 +872,11 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Player2 Move(2player mode)</comment>
-                        <event-block sid="3629894863476463">
-                            <conditions>
-                                <condition id="-1" name="Every tick" sid="2062883770988919" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="4940392991208186" type="player2dummy">
-                                    <param id="0" name="Y">player2.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block collapsed="1" sid="7323778497646728">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="9072396498794981" type="System">
-                                    <param id="0" name="Variable">numberOfPlayer</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <variable constant="0" name="randDist" sid="4328610747564765" static="0" type="number">0</variable>
-                                <variable constant="0" name="randMove" sid="931417035981457" static="0" type="number">0</variable>
-                                <event-block sid="6686963472828823">
-                                    <conditions>
-                                        <condition id="0" name="On collision with another object" sid="9326363082051716" type="player2dummy">
-                                            <param id="0" name="Object">slipper</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="6960409431189115" type="System">
-                                            <param id="0" name="Variable">randMove</param>
-                                            <param id="1" name="Value">random(0,10)</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="9118116239460968" type="System">
-                                            <param id="0" name="Variable">randDist</param>
-                                            <param id="1" name="Value">random(5,20)</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="9641241006249655">
-                                            <conditions>
-                                                <condition id="-12" name="Repeat" sid="9610686210326059" type="System">
-                                                    <param id="0" name="Count">int(randDist)</param>
-                                                </condition>
-                                                <condition id="-21" name="Is between values" sid="3464791944358825" type="System">
-                                                    <param id="0" name="Value">randMove</param>
-                                                    <param id="1" name="Lower bound">6</param>
-                                                    <param id="2" name="Upper bound">10</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6964726695362589" type="player1">
-                                                    <param id="0" name="Instance variable">isMaster</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="5515236507293005" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMoveDown&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="789047492815284" type="System">
-                                                    <param id="0" name="Seconds">0.5</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="5088431592111626">
-                                            <conditions>
-                                                <condition id="-12" name="Repeat" sid="190869304028548" type="System">
-                                                    <param id="0" name="Count">int(randDist)</param>
-                                                </condition>
-                                                <condition id="-21" name="Is between values" sid="2922846559304621" type="System">
-                                                    <param id="0" name="Value">randMove</param>
-                                                    <param id="1" name="Lower bound">2</param>
-                                                    <param id="2" name="Upper bound">6</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9395797384240864" type="player1">
-                                                    <param id="0" name="Instance variable">isMaster</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="8329244754670885" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMoveUp&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="5795109706745753" type="System">
-                                                    <param id="0" name="Seconds">0.5</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
                     </sub-events>
                 </event-group>
             </sub-events>
         </event-group>
-        <event-block collapsed="1" sid="2727284895992717">
+        <event-block sid="2727284895992717">
             <conditions>
                 <condition id="0" name="On function" sid="8084633676280412" type="Function">
                     <param id="0" name="Name">&quot;PlayerMoveUp&quot;</param>
@@ -778,6 +899,14 @@
                     </conditions>
                     <actions>
                         <action id="-23" name="Move at angle" sid="6718844016535108" type="player2">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="3484121145522846" type="FarTrigger">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="3829966957023747" type="NearTrigger">
                             <param id="0" name="Angle">270</param>
                             <param id="1" name="Distance">3</param>
                         </action>
@@ -808,7 +937,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block collapsed="1" sid="6024925453690991">
+        <event-block sid="6024925453690991">
             <conditions>
                 <condition id="0" name="On function" sid="7354521078503014" type="Function">
                     <param id="0" name="Name">&quot;PlayerMoveDown&quot;</param>
@@ -831,6 +960,14 @@
                     </conditions>
                     <actions>
                         <action id="-23" name="Move at angle" sid="7427743996945996" type="player2">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="8906977333545806" type="FarTrigger">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="3033955750734667" type="NearTrigger">
                             <param id="0" name="Angle">90</param>
                             <param id="1" name="Distance">3</param>
                         </action>
@@ -919,5 +1056,9 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="1327057776327549">
+            <conditions />
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>
