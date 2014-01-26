@@ -10,6 +10,7 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="7278434337211941" type="Audio" />
                 <action id="9" name="Set scale" sid="965907892542814" type="1playerbutton">
                     <param id="0" name="Scale">1.05</param>
                 </action>
@@ -38,6 +39,7 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="9963347090959781" type="Audio" />
                 <action id="9" name="Set scale" sid="7822869400862268" type="2playerbutton">
                     <param id="0" name="Scale">1.05</param>
                 </action>

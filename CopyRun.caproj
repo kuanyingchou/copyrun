@@ -791,6 +791,8 @@
         <file name="AsWeAre.wav" />
         <file name="dead.ogg" />
         <file name="dead.wav" />
+        <file name="Pomade.ogg" />
+        <file name="Pomade.wav" />
     </sounds-folder>
     <music-folder expanded="1" />
     <files-folder expanded="1">
