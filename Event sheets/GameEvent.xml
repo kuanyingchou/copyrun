@@ -348,6 +348,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="573556957324078" type="Audio">
+                                    <param id="0" name="Audio file">jump</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="4" name="Set animation" sid="7308987795965009" type="player1">
                                     <param id="0" name="Animation">&quot;Jump&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -734,6 +740,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Play" sid="7965413101372376" type="Audio">
+                                            <param id="0" name="Audio file">jump</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                         <action id="4" name="Set animation" sid="4109691364321041" type="player2">
                                             <param id="0" name="Animation">&quot;Jump&quot;</param>
                                             <param id="1" name="From">1</param>
