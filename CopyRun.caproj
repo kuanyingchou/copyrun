@@ -512,7 +512,7 @@
         </global-instance>
         <global-instance type="Function" uid="29" />
     </global-instances>
-    <sounds-folder expanded="0">
+    <sounds-folder expanded="1">
         <file name="a_hitwav.m4a" />
         <file name="a_hitwav.ogg" />
         <file name="a_hitwav.wav" />
@@ -528,6 +528,10 @@
         <file name="Tidal_Wave.m4a" />
         <file name="Tidal_Wave.ogg" />
         <file name="Tidal_Wave.wav" />
+        <file name="AsWeAre.ogg" />
+        <file name="AsWeAre.wav" />
+        <file name="dead.ogg" />
+        <file name="dead.wav" />
     </sounds-folder>
     <music-folder expanded="1" />
     <files-folder expanded="1">
