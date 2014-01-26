@@ -358,8 +358,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>354</x>
-                        <y>247</y>
+                        <x>365</x>
+                        <y>75</y>
                         <z>0</z>
                         <width>114</width>
                         <height>58</height>
@@ -426,8 +426,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>847</x>
-                        <y>261</y>
+                        <x>815</x>
+                        <y>225</y>
                         <z>0</z>
                         <width>114</width>
                         <height>58</height>
@@ -660,6 +660,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="player2dummy" uid="30">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>355</x>
+                        <y>202</y>
+                        <z>0</z>
+                        <width>21</width>
+                        <height>49</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

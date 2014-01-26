@@ -11,6 +11,7 @@
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -281,7 +282,7 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8824784916627569" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.157895" y="0.310345" />
+                            <point x="0.157895" y="0.0862071" />
                             <point x="0.5" y="0.0862069" />
                             <point x="0.903509" y="0.189655" />
                             <point x="1" y="0.5" />
@@ -354,6 +355,17 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Function" sid="7629565898772506">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="player2dummy" sid="7211316818631554">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903082024381467" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="0">
@@ -391,6 +403,7 @@
                 <doppler-factor>1</doppler-factor>
             </properties>
         </global-instance>
+        <global-instance type="Function" uid="29" />
     </global-instances>
     <sounds-folder expanded="0">
         <file name="a_hitwav.m4a" />

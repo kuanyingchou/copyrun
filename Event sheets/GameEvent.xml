@@ -3,7 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvent</name>
     <events>
-        <event-group collapsed="1" description="" sid="4313368447779565" title="SceneLoop">
+        <comment>1player or 2players mode</comment>
+        <variable constant="0" name="is1Player" sid="6795792162138103" static="0" type="number">1</variable>
+        <event-group description="" sid="4313368447779565" title="SceneLoop">
             <sub-events>
                 <event-block sid="3561453315717872">
                     <conditions>
@@ -100,7 +102,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8775974028580874" title="Player1">
+        <event-group collapsed="1" description="" sid="8775974028580874" title="Player1">
             <sub-events>
                 <event-block sid="1510345920897547">
                     <conditions>
@@ -481,6 +483,11 @@
                                 <condition id="0" name="On key pressed" sid="8652045774866821" type="Keyboard">
                                     <param id="0" name="Key">37 (Left arrow)</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="5212731803130845" type="System">
+                                    <param id="0" name="Variable">is1Player</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="4109691364321041" type="player2">
@@ -496,55 +503,26 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Player2 Move</comment>
+                        <comment>Player2 Move(2player mode)</comment>
                         <event-block sid="8908183057062071">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="9122985595302454" type="Keyboard">
                                     <param id="0" name="Key">38 (Up arrow)</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="1439693521803988" type="System">
+                                    <param id="0" name="Variable">is1Player</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="7196861436014003">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6047990271900381" type="player1">
-                                            <param id="0" name="Instance variable">isMaster</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="3809617092236932" type="player2">
-                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                                        </condition>
-                                        <condition id="-2" name="Compare Y" sid="1595135744289661" type="player2">
-                                            <param id="0" name="Comparison">5</param>
-                                            <param id="1" name="Y co-ordinate">40</param>
-                                        </condition>
-                                    </conditions>
+                                <event-block sid="725135660104513">
+                                    <conditions />
                                     <actions>
-                                        <action id="-23" name="Move at angle" sid="7038859312784181" type="player2">
-                                            <param id="0" name="Angle">270</param>
-                                            <param id="1" name="Distance">3</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="6305993969513034">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="6982586987591043" type="player2">
-                                            <param id="0" name="Instance variable">isMaster</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="6613220424070638" type="player1">
-                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="4686827280404617" type="player2">
-                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                                        </condition>
-                                        <condition id="-2" name="Compare Y" sid="937649394732574" type="player1">
-                                            <param id="0" name="Comparison">5</param>
-                                            <param id="1" name="Y co-ordinate">440</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-23" name="Move at angle" sid="6988008498790818" type="player1">
-                                            <param id="0" name="Angle">270</param>
-                                            <param id="1" name="Distance">3</param>
+                                        <action id="0" name="Call function" sid="4055279529951973" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerMoveUp&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -555,51 +533,107 @@
                                 <condition id="2" name="Key is down" sid="329535832763759" type="Keyboard">
                                     <param id="0" name="Key">40 (Down arrow)</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="5361136417226748" type="System">
+                                    <param id="0" name="Variable">is1Player</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="4846287471969906">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8826469790684652" type="player1">
-                                            <param id="0" name="Instance variable">isMaster</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="3434447294843092" type="player2">
-                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                                        </condition>
-                                        <condition id="-2" name="Compare Y" sid="429002366353221" type="player2">
-                                            <param id="0" name="Comparison">3</param>
-                                            <param id="1" name="Y co-ordinate">280</param>
-                                        </condition>
-                                    </conditions>
+                                <event-block sid="728988201356249">
+                                    <conditions />
                                     <actions>
-                                        <action id="-23" name="Move at angle" sid="4998916908257042" type="player2">
-                                            <param id="0" name="Angle">90</param>
-                                            <param id="1" name="Distance">3</param>
+                                        <action id="0" name="Call function" sid="9244770313235653" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerMoveDown&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="6225832040691804">
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3629894863476463">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="2062883770988919" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="4940392991208186" type="player2dummy">
+                                    <param id="0" name="Y">player2.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7323778497646728">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9072396498794981" type="System">
+                                    <param id="0" name="Variable">is1Player</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="randDist" sid="4328610747564765" static="0" type="number">0</variable>
+                                <variable constant="0" name="randMove" sid="931417035981457" static="0" type="number">0</variable>
+                                <event-block sid="6686963472828823">
                                     <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="2288774338899293" type="player2">
-                                            <param id="0" name="Instance variable">isMaster</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="4253057768050478" type="player1">
-                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="4023100226960384" type="player2">
-                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                                        </condition>
-                                        <condition id="-2" name="Compare Y" sid="9079276574475048" type="player1">
-                                            <param id="0" name="Comparison">3</param>
-                                            <param id="1" name="Y co-ordinate">700</param>
+                                        <condition id="0" name="On collision with another object" sid="9326363082051716" type="player2dummy">
+                                            <param id="0" name="Object">slipper</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-23" name="Move at angle" sid="9040057519350816" type="player1">
-                                            <param id="0" name="Angle">90</param>
-                                            <param id="1" name="Distance">3</param>
+                                        <action id="-9" name="Set value" sid="6960409431189115" type="System">
+                                            <param id="0" name="Variable">randMove</param>
+                                            <param id="1" name="Value">random(0,10)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9118116239460968" type="System">
+                                            <param id="0" name="Variable">randDist</param>
+                                            <param id="1" name="Value">random(5,20)</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="9641241006249655">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="9610686210326059" type="System">
+                                                    <param id="0" name="Count">int(randDist)</param>
+                                                </condition>
+                                                <condition id="-21" name="Is between values" sid="3464791944358825" type="System">
+                                                    <param id="0" name="Value">randMove</param>
+                                                    <param id="1" name="Lower bound">6</param>
+                                                    <param id="2" name="Upper bound">10</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="5515236507293005" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerMoveDown&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="789047492815284" type="System">
+                                                    <param id="0" name="Seconds">0.5</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5088431592111626">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="190869304028548" type="System">
+                                                    <param id="0" name="Count">int(randDist)</param>
+                                                </condition>
+                                                <condition id="-21" name="Is between values" sid="2922846559304621" type="System">
+                                                    <param id="0" name="Value">randMove</param>
+                                                    <param id="1" name="Lower bound">2</param>
+                                                    <param id="2" name="Upper bound">6</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="8329244754670885" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerMoveUp&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="5795109706745753" type="System">
+                                                    <param id="0" name="Seconds">0.5</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -607,5 +641,111 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <event-block collapsed="1" sid="2727284895992717">
+            <conditions>
+                <condition id="0" name="On function" sid="8084633676280412" type="Function">
+                    <param id="0" name="Name">&quot;PlayerMoveUp&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6651053950755756">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="873962742906361" type="player1">
+                            <param id="0" name="Instance variable">isMaster</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="5007972750769761" type="player2">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="5846718966234655" type="player2">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="6718844016535108" type="player2">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7582012834313173">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5806295701307302" type="player2">
+                            <param id="0" name="Instance variable">isMaster</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="4637405954847522" type="player1">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="5231289178235022" type="player2">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="2601653959170541" type="player1">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">440</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="8942089981965059" type="player1">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block collapsed="1" sid="6024925453690991">
+            <conditions>
+                <condition id="0" name="On function" sid="7354521078503014" type="Function">
+                    <param id="0" name="Name">&quot;PlayerMoveDown&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4572576377563646">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7700390290082155" type="player1">
+                            <param id="0" name="Instance variable">isMaster</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="4676139343467232" type="player2">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="9707985813422586" type="player2">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">280</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="7427743996945996" type="player2">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="682072998960187">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1500819642450403" type="player2">
+                            <param id="0" name="Instance variable">isMaster</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="6062603226349863" type="player1">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="9120807755413593" type="player2">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="2140991451877695" type="player1">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">700</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="4650056356149012" type="player1">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>
