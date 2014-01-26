@@ -854,14 +854,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>207</x>
-                        <y>200</y>
+                        <x>251</x>
+                        <y>256</y>
                         <z>0</z>
                         <width>42</width>
                         <height>56</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -932,7 +932,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SlaveText" uid="42">
+                <instance type="SlaveText" uid="10">
                     <properties>
                         <text>You can only jump</text>
                         <initial-visibility>Visible</initial-visibility>

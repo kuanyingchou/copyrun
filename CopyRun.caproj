@@ -10,13 +10,13 @@
     <unique-id>lpwx141mlkvi</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -747,14 +747,14 @@
         <event-sheet>CoverEvent.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="16" />
-        <global-instance type="Touch" uid="17">
+        <global-instance type="Keyboard" uid="17" />
+        <global-instance type="Touch" uid="18">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Mouse" uid="18" />
-        <global-instance type="Audio" uid="26">
+        <global-instance type="Mouse" uid="26" />
+        <global-instance type="Audio" uid="29">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -769,7 +769,7 @@
                 <doppler-factor>1</doppler-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="29" />
+        <global-instance type="Function" uid="47" />
     </global-instances>
     <sounds-folder expanded="1">
         <file name="a_hitwav.m4a" />

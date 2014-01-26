@@ -116,7 +116,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8775974028580874" title="Player1">
+        <event-group collapsed="1" description="" sid="8775974028580874" title="Player1">
             <sub-events>
                 <event-block sid="1510345920897547">
                     <conditions>
@@ -516,7 +516,7 @@
                 </event-block>
                 <event-group description="" sid="9874605663161816" title="Hit2">
                     <sub-events>
-                        <event-block sid="5935421429519107">
+                        <event-block collapsed="1" sid="5935421429519107">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="9401887388652661" type="player2">
                                     <param id="0" name="Object">cup</param>
@@ -640,7 +640,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="4795050635858755">
+                        <event-block collapsed="1" sid="4795050635858755">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="3476415438741679" type="player2">
                                     <param id="0" name="Object">slipper</param>
@@ -736,7 +736,7 @@
                                     <sub-events>
                                         <variable constant="0" name="randDist" sid="4328610747564765" static="0" type="number">0</variable>
                                         <variable constant="0" name="randMove" sid="931417035981457" static="0" type="number">0</variable>
-                                        <event-block collapsed="1" sid="6686963472828823">
+                                        <event-block sid="6686963472828823">
                                             <conditions>
                                                 <condition id="0" name="On collision with another object" sid="9326363082051716" type="FarTrigger">
                                                     <param id="0" name="Object">slipper</param>
@@ -821,7 +821,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block collapsed="1" sid="1425294954223971">
+                                        <event-block sid="1425294954223971">
                                             <conditions>
                                                 <condition id="0" name="On collision with another object" sid="7947294430318564" type="FarTrigger">
                                                     <param id="0" name="Object">cup</param>
