@@ -62,7 +62,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <life>100</life>
+                        <life>3</life>
                         <isMaster>false</isMaster>
                         <isSlave>false</isSlave>
                     </instance-variables>
