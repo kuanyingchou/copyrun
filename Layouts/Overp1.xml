@@ -27,55 +27,24 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Over" uid="20">
-                    <properties>
-                        <text>Win</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-96,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>465</x>
-                        <y>319</y>
-                        <z>0</z>
-                        <width>230</width>
-                        <height>172</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="player2" uid="22">
+                <instance type="player2win" uid="20">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <life>3</life>
-                        <isMaster>false</isMaster>
-                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>340</x>
-                        <y>388</y>
+                        <x>0</x>
+                        <y>0</y>
                         <z>0</z>
-                        <width>237</width>
-                        <height>298</height>
+                        <width>1024</width>
+                        <height>768</height>
                         <depth>0</depth>
-                        <hotspotX>0.502590656</hotspotX>
-                        <hotspotY>0.502590656</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

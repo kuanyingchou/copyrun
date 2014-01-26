@@ -27,56 +27,24 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Over" uid="15">
-                    <properties>
-                        <text>Win</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-96,400,0</font>
-                        <color>204,51,51</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>465</x>
-                        <y>319</y>
-                        <z>0</z>
-                        <width>230</width>
-                        <height>172</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="player1" uid="19">
+                <instance type="player1win" uid="15">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <life>3</life>
-                        <isMaster>false</isMaster>
-                        <isSlave>false</isSlave>
-                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>340</x>
-                        <y>388</y>
+                        <x>0</x>
+                        <y>0</y>
                         <z>0</z>
-                        <width>417.44317627</width>
-                        <height>408.685699463</height>
+                        <width>1024</width>
+                        <height>768</height>
                         <depth>0</depth>
-                        <hotspotX>0.503225803</hotspotX>
-                        <hotspotY>0.506944418</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
