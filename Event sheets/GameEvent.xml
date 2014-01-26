@@ -422,6 +422,22 @@
                             <param id="0" name="Text">player2.life</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="3066623666617128">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2696828665101178" type="System">
+                                    <param id="0" name="Variable">numberOfPlayer</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="3118375717309582" type="player2jump" />
+                                <action id="-9" name="Destroy" sid="3762111993217219" type="player2down" />
+                                <action id="-9" name="Destroy" sid="1536535006093609" type="player2up" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-group description="" sid="9874605663161816" title="Hit2">
                     <sub-events>
